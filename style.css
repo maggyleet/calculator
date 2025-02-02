@@ -2,6 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -90,4 +92,25 @@ button:hover {
 
 .ac:hover, .del:hover {
     background: #c0392b;
+}
+
+.running-text {
+    font-size: 2rem;
+    text-align: center;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    animation: runText 15s linear infinite;
+}
+
+/* Keyframe Animation */
+@keyframes runText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
