@@ -5,8 +5,8 @@ const equalButton = document.querySelector('.equal');
 const clearButton = document.querySelector('.ac');
 const deleteButton = document.querySelector('.del');
 const decimalButton = document.querySelector('.dot');
-const expButton = document.querySelector('.exp'); // Selecting exponentiation button
-const modButton = document.querySelector('.mod'); // Selecting modulo button
+const expButton = document.querySelector('.exp'); 
+const modButton = document.querySelector('.mod');
 
 let firstOperand = '';
 let secondOperand = '';
@@ -75,21 +75,20 @@ decimalButton.addEventListener('click', () => {
     }
 });
 
-// Operation function
 function operate(x, y, op) {
     switch (op) {
         case '+':
             return x + y;
         case '-':
             return x - y;
-        case 'x': // Fixing multiplication symbol
+        case 'x':
         case '*':
             return x * y;
         case '/':
             return y === 0 ? 'Error' : x / y;
-        case '%': // Fixing modulo operation
+        case '%':
             return x % y;
-        case '^': // Fixing exponentiation
+        case '^': 
             return Math.pow(x, y);
         default:
             return y;
