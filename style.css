@@ -1,0 +1,93 @@
+/* Apply a simple background */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Style the calculator container */
+.calculator {
+    width: 320px;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the display */
+.display {
+    width: 100%;
+    height: 60px;
+    background: #333;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Style the buttons container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Style the buttons */
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Change button color when hovered */
+button:hover {
+    background: #666;
+}
+
+/* Style specific buttons */
+.oper,.mod,.exp {
+    background: #f39c12;
+}
+
+.oper:hover, .mod:hover, .exp:hover{
+    background: #e67e22;
+}
+
+.equal {
+    background: #27ae60;
+}
+
+.equal:hover {
+    background: #2ecc71;
+}
+
+.ac, .del {
+    background: #e74c3c;
+}
+
+.ac:hover, .del:hover {
+    background: #c0392b;
+}
